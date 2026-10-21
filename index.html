@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 e o idioma padrão como Português do Brasil -->
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <!-- Configura a codificação de caracteres para suportar acentos (UTF-8) -->
+    <meta charset="UTF-8">
+    <!-- Garante que o site seja responsivo em celulares e computadores -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparece na aba do navegador -->
+    <title>GabrielTech | Manutenção e Conserto de Celulares</title>
+    
+    <!-- Carrega o framework Tailwind CSS via CDN para estilização rápida -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>    
+        // Configuração de cores personalizadas do Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: { 950: '#050505', 900: '#0a0a0a', 800: '#121212', 700: '#1a1a1a', 600: '#262626' },
+                        brand: { cyan: '#00f2fe', blue: '#4facfe', green: '#10b981' }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Importa a biblioteca FontAwesome para exibir ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Importa a fonte 'Inter' do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Vincula sua folha de estilos CSS externa -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- Corpo principal do site, com cor de fundo escura e texto claro -->
+<body class="bg-dark-950 text-gray-100 antialiased selection:bg-brand-cyan selection:text-black">
+
+    <!-- CABEÇALHO / NAVEGAÇÃO FIXA -->
+<header class="fixed top-0 left-0 w-full z-50 bg-dark-900/90 backdrop-blur-md border-b border-dark-700">
+    <!-- Contêiner centralizado do menu -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        
+        <!-- Logotipo da Marca (Apenas a Imagem) -->
+        <a href="index.html" class="flex items-center group">
+            <img src="img/Img-logo.jpg" alt="Gabriel Tech" class="h-14 w-auto object-contain rounded-lg">
+        </a>
+
+       <!-- Menu de Navegação para Computadores (Desktop) -->
+        <nav class="hidden md:flex items-center space-x-8">
+            <a href="#inicio" class="text-sm font-medium hover:text-brand-cyan transition-colors">Início</a>
+            <a href="#servicos" class="text-sm font-medium hover:text-brand-cyan transition-colors">Serviços</a>
+            <a href="cadastro.html" class="text-sm font-medium hover:text-brand-cyan transition-colors">Orçamento Online</a>
+            <a href="#video" class="text-sm font-medium hover:text-brand-cyan transition-colors">Vídeo Demonstrativo</a>
+            <a href="#contato" class="text-sm font-medium hover:text-brand-cyan transition-colors">Contato</a>
+        </nav>
+
+            <!-- Botão de Ação Rápida para Desktop -->
+            <div class="hidden md:flex items-center">
+                <a href="https://wa.me/5591999999999?text=Olá%2C%20GabrielTech!%20Gostaria%20de%20fazer%20um%20orçamento." target="_blank" class="px-5 py-2.5 rounded-xl gradient-bg text-dark-900 font-semibold text-sm flex items-center space-x-2 shadow-lg glow-effect-hover transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Botão do Menu Hambúrguer para Celular (Mobile) -->
+            <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menu Suspenso Mobile (Aparece ao clicar no botão hambúrguer) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-b border-dark-700 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="block py-2 text-base font-medium hover:text-brand-cyan transition-colors">Início</a>
+            <a href="#servicos" class="block py-2 text-base font-medium hover:text-brand-cyan transition-colors">Serviços</a>
+            <a href="#orcamento" class="block py-2 text-base font-medium hover:text-brand-cyan transition-colors">Orçamento Online</a>
+            <a href="#video" class="block py-2 text-base font-medium hover:text-brand-cyan transition-colors">Vídeo Demonstrativo</a>
+            <a href="#contato" class="block py-2 text-base font-medium hover:text-brand-cyan transition-colors">Contato</a>
+            <div class="pt-2">
+                <a href="https://wa.me/5591999999999?text=Olá%2C%20GabrielTech!" target="_blank" class="w-full py-3 rounded-xl gradient-bg text-dark-900 font-bold flex items-center justify-center space-x-2 shadow-md">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Chamar no WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SEÇÃO PRINCIPAL (HERO / DESTAQUE) -->
+    <section id="inicio" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-dark-900">
+        <!-- Efeito de brilho de fundo decorativo -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-cyan/10 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Coluna de Textos -->
+                <div class="space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-dark-800 border border-dark-600 text-brand-cyan text-xs font-semibold tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span>
+                        <span>ASSISTÊNCIA TÉCNICA ESPECIALIZADA</span>
+                    </div>
+                    <!-- Título principal -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Seu celular novo <br><span class="gradient-text">de novo na sua mão.</span>
+                    </h1>
+                    <!-- Descrição -->
+                    <p class="text-gray-400 text-lg max-w-xl mx-auto md:mx-0">
+                        Conserto rápido, seguro e com garantia. Especialistas em telas, baterias, placas e recuperação de aparelhos.
+                    </p>
+                    <!-- Botões de chamada para ação -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-2">
+                        <a href="#orcamento" class="w-full sm:w-auto px-8 py-4 rounded-xl gradient-bg text-dark-900 font-bold text-center shadow-lg transition-all transform hover:-translate-y-1">
+                            Simular Orçamento
+                        </a>
+                        <a href="https://wa.me/5591999999999?text=Olá%2C%20GabrielTech!" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-dark-800 hover:bg-dark-700 text-white font-semibold border border-dark-600 text-center transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-brand-green text-xl"></i>
+                            <span>Fale Conosco</span>
+                        </a>
+                    </div>
+                    <!-- Estatísticas / Indicadores -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-dark-800 text-center md:text-left">
+                        <div><p class="text-2xl font-bold text-white">+5.000</p><p class="text-xs text-gray-400">Aparelhos Consertados</p></div>
+                        <div><p class="text-2xl font-bold text-white">99%</p><p class="text-xs text-gray-400">Clientes Satisfeitos</p></div>
+                        <div><p class="text-2xl font-bold text-white">90 Dias</p><p class="text-xs text-gray-400">Garantia em Serviços</p></div>
+                    </div>
+                </div>
+                <!-- Coluna do card ilustrativo visual -->
+                <div class="relative flex justify-center">
+                    <div class="relative w-full max-w-md bg-dark-800 p-6 rounded-3xl border border-dark-700 shadow-2xl">
+                        <div class="absolute -top-3 -right-3 bg-brand-green text-dark-900 text-xs font-bold px-3 py-1 rounded-full shadow-md">Orçamento Grátis</div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between pb-4 border-b border-dark-700">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-12 h-12 rounded-xl bg-dark-700 flex items-center justify-center text-brand-cyan text-xl"><i class="fa-solid fa-wrench"></i></div>
+                                    <div><h4 class="font-bold text-white">Diagnóstico Técnico</h4><p class="text-xs text-gray-400">Análise completa</p></div>
+                                </div>
+                                <span class="text-brand-cyan font-bold text-sm">Na Hora</span>
+                            </div>
+                            <div class="bg-dark-900 p-4 rounded-2xl border border-dark-700 space-y-2">
+                                <div class="flex justify-between text-xs text-gray-400"><span>Status</span><span class="text-brand-green font-semibold">Em Andamento</span></div>
+                                <div class="w-full bg-dark-700 h-2 rounded-full overflow-hidden"><div class="bg-gradient-to-r from-brand-cyan to-brand-blue h-full w-3/4 rounded-full"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- SEÇÃO DE SERVIÇOS -->
+    <section id="servicos" class="py-20 bg-dark-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Cabeçalho da Seção -->
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-brand-cyan text-xs font-bold tracking-widest uppercase px-3 py-1 bg-dark-900 rounded-full border border-dark-800">O que fazemos</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Nossos Principais Serviços</h2>
+                <p class="text-gray-400">Soluções completas, rápidas e profissionais para manter seu smartphone funcionando perfeitamente.</p>
+            </div>
+
+            <!-- Grade de Cards de Serviços -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Troca de Tela -->
+                <div class="bg-dark-900 p-8 rounded-2xl border border-dark-800 hover:border-brand-cyan/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-dark-800 border border-dark-700 flex items-center justify-center text-brand-cyan text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Troca de Tela / Display</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Substituição de telas quebradas, touchscreen travado ou display manchado com componentes de alta qualidade.</p>
+                </div>
+
+                <!-- Card 2: Troca de Bateria -->
+                <div class="bg-dark-900 p-8 rounded-2xl border border-dark-800 hover:border-brand-cyan/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-dark-800 border border-dark-700 flex items-center justify-center text-brand-cyan text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-battery-full"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Troca de Bateria</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Seu celular descarrega rápido ou desliga sozinho? Trocamos por baterias novas com excelente autonomia.</p>
+                </div>
+
+                <!-- Card 3: Remoção de Conta Google (FRP) -->
+                <div class="bg-dark-900 p-8 rounded-2xl border border-dark-800 hover:border-brand-cyan/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-dark-800 border border-dark-700 flex items-center justify-center text-brand-cyan text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Remoção de Conta Google</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Desbloqueio seguro de conta Google (FRP) e formatação avançada para aparelhos travados após restauração.</p>
+                </div>
+
+                <!-- Card 4: Reparo em Placa Lógica -->
+                <div class="bg-dark-900 p-8 rounded-2xl border border-dark-800 hover:border-brand-cyan/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-dark-800 border border-dark-700 flex items-center justify-center text-brand-cyan text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Reparo em Placa</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Micro-soldagem especializada e consertos em placa lógica para aparelhos que não ligam ou sem rede.</p>
+                </div>
+
+                <!-- Card 5: Conector de Carga -->
+                <div class="bg-dark-900 p-8 rounded-2xl border border-dark-800 hover:border-brand-cyan/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-dark-800 border border-dark-700 flex items-center justify-center text-brand-cyan text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-plug-circle-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Conector de Carga</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Problemas para carregar ou cabo frouxo? Realizamos a troca rápida do conector USB-C ou Lightning.</p>
+                </div>
+
+                <!-- Card 6: Desoxidação (Danos por Líquidos) -->
+                <div class="bg-dark-900 p-8 rounded-2xl border border-dark-800 hover:border-brand-cyan/50 transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-dark-800 border border-dark-700 flex items-center justify-center text-brand-cyan text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Desoxidação (Água)</h3>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Banho químico profissional em ultrassom para limpeza de placas e recuperação de aparelhos que caíram na água.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO VÍDEO DEMONSTRATIVO -->
+<section id="video-demonstrativo" class="py-20 bg-dark-950 border-t border-dark-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <!-- Título e Subtítulo -->
+        <div class="max-w-3xl mx-auto space-y-4 mb-12">
+            <span class="text-brand-cyan text-xs font-bold tracking-widest uppercase px-3 py-1 bg-dark-900 rounded-full border border-dark-800">Demonstração</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Veja Nosso <span class="gradient-text">Trabalho</span></h2>
+            <p class="text-gray-400">Confira em detalhes como realizamos a manutenção dos aparelhos na Gabriel Tech.</p>
+        </div>
+
+        <!-- Container do Vídeo Vertical (Moldura de Smartphone) -->
+        <div class="flex justify-center items-center">
+            <div class="relative w-full max-w-[320px] sm:max-w-[360px] bg-dark-900 p-3 sm:p-4 rounded-[40px] border-2 border-dark-700 shadow-2xl glow-effect">
+                
+                <!-- Detalhe da Câmera/Notch do Celular -->
+                <div class="absolute top-5 left-1/2 -translate-x-1/2 w-20 h-4 bg-dark-800 rounded-full z-20 flex items-center justify-center space-x-2">
+                    <div class="w-2.5 h-2.5 rounded-full bg-dark-950"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-dark-700"></div>
+                </div>
+
+                <!-- Aspect Ratio 9:16 Mantido Perfeitamente -->
+                <div class="relative w-full aspect-[9/16] rounded-[28px] overflow-hidden bg-black shadow-inner">
+                    <video 
+                        class="w-full h-full object-cover" 
+                        controls 
+                        playsinline 
+                        preload="metadata"
+                        poster="thumb-video.jpg">
+                        <source src="video-/reparo.mp4" type="video/mp4">
+                        Seu navegador não suporta a exibição deste vídeo.
+                    </video>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

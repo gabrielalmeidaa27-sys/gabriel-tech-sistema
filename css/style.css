@@ -1,0 +1,52 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
+
+/* Define regras gerais aplicadas à estrutura base do site */
+body {
+    /* Define a fonte padrão 'Inter' importada do Google Fonts, com fallback para fontes sans-serif padrão */
+    font-family: 'Inter', sans-serif;
+    
+    /* Define a cor de fundo padrão para um tom escuro/preto fosco sofisticado */
+    background-color: #0a0a0a;
+    
+    /* Define a cor padrão do texto para um cinza muito claro (quase branco), facilitando a leitura */
+    color: #f3f4f6;
+}
+
+
+/* ==========================================================================
+   EFEITOS DE BRILHO (GLOW)
+   ========================================================================== */
+
+/* Cria uma sombra luminosa sutil (com a cor ciano da marca) ao redor dos elementos */
+.glow-effect {
+    /* box-shadow: deslocamento-x deslocamento-y desfoque cor-rgba */
+    box-shadow: 0 0 25px rgba(0, 242, 254, 0.15);
+}
+
+/* Cria um efeito de brilho mais intenso que é ativado apenas quando o usuário passa o mouse por cima (:hover) */
+.glow-effect-hover:hover {
+    /* Aumenta o raio de desfoque (30px) e a opacidade da cor para dar destaque visual na interação */
+    box-shadow: 0 0 30px rgba(0, 242, 254, 0.35);
+}
+
+
+/* ==========================================================================
+   EFEITOS DE TEXTO COM GRADIENTE
+   ========================================================================== */
+
+/* Aplica um efeito de cor degradê (transição suave de azul claro para ciano) diretamente nos textos */
+.gradient-text {
+    /* Cria um fundo linear com duas cores indo de 0% a 100% de inclinação */
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    
+    /* Define o recorte do fundo como texto (padrão moderno) */
+    background-clip: text;
+
+    /* Restringe o preenchimento do fundo para dentro dos limites do texto (compatibilidade com WebKit/Chrome/Safari) */
+    -webkit-background-clip: text;
+    
+    /* Torna o preenchimento interno do texto transparente, permitindo que o gradiente apareça "através" das letras */
+    -webkit-text-fill-color: transparent;
+}
